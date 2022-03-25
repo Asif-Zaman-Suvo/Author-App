@@ -8,7 +8,7 @@ const Authors = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [infoPerPage] = useState(3);
+  const [infoPerPage] = useState(4);
 
   useEffect(() => {
     setLoading(true);
@@ -27,16 +27,16 @@ const Authors = () => {
       });
   }, []);
 
-  //Get current data 
+  //Get current data
 
-  const indexOfLastData = currentPage*infoPerPage;
-  const indexOfFirstData=indexOfLastData-infoPerPage;
-  const currentData=data.slice(indexOfFirstData, indexOfLastData)
+  const indexOfLastData = currentPage * infoPerPage;
+  const indexOfFirstData = indexOfLastData - infoPerPage;
+  const currentData = data.slice(indexOfFirstData, indexOfLastData);
 
   // changing the page number
-  const paginate=(pageNumber)=>{
-      setCurrentPage(pageNumber)
-  }
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <>
@@ -45,17 +45,21 @@ const Authors = () => {
           <Spinner />
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-4 text-center text-3xl">
+        <div className="container-fluid mx-auto px-8 py-8 grid grid-cols-4 gap-4 text-center text-3xl">
           {currentData.map((result) => (
             <ListItemComponent
               key={result._id}
               result={result}
             ></ListItemComponent>
           ))}
-
-         <Pagination paginate={paginate} infoPerPage={infoPerPage} totalData={data.length}/>
         </div>
       )}
+      <Pagination
+        paginate={paginate}
+        infoPerPage={infoPerPage}
+        totalData={data.length}
+        loading={loading}
+      />
     </>
   );
 };
