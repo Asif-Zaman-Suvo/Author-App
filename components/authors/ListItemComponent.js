@@ -5,8 +5,14 @@ const ListItemComponent = ({ result }) => {
   const [favourites, setFavourites] = useContext(UserFavourite);
 
   const handleAddFavourite = (result) => {
-    setFavourites([...favourites, result]);
-    localStorage.setItem("favourites", JSON.stringify(favourites));
+    const updatedArray = [...favourites, result];
+    Promise.all([
+      setFavourites((prev) => {
+        return [...prev, result];
+      }),
+    ]).then(() =>
+      localStorage.setItem("favourites", JSON.stringify(updatedArray))
+    );
   };
 
   return (
