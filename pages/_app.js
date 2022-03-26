@@ -6,9 +6,9 @@ function MyApp({ Component, pageProps }) {
   const [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
-    const my = JSON.parse(localStorage.getItem("favourites"));
-    if (my) {
-      setFavourites(my);
+    const items = JSON.parse(localStorage.getItem("favourites"));
+    if (items) {
+      setFavourites(items);
     }
   },[]);
 
