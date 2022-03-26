@@ -4,8 +4,7 @@ import Dashboard from './../../components/dashboard/Dashboard';
 const index = () => {
     return (
         <div>
-            <Dashboard/>
-            
+            <Dashboard/>            
         </div>
     );
 };

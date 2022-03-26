@@ -12,6 +12,7 @@ const FavouriteAuthors = () => {
   function deleteAuthor(_id) {
     const updatedAuthor = favourites.filter((author) => author._id !== _id);
     setFavourites(updatedAuthor);
+    localStorage.removeItem("favourites")
   }
 
   return (
