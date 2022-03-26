@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const FavouriteAuthors = () => {
   const router = useRouter();
   const [favourites, setFavourites] = useContext(UserFavourite);
-  console.log("add to favourite", favourites);
 
   //delete a author
 
