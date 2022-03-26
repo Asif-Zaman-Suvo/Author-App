@@ -15,3 +15,10 @@ I can click on the “Add favorite” button & it will add that author in my fav
 ### Favorite Authors:
 The Favorite Authors menu should display the list of my favorite authors using the
 ListItemComponent. If I click the “Remove favorite” button from this menu, the author should be removed from this menu list as well.
+
+### Live Site Link
+ https://authors-app.vercel.app/ 
+
+ And you can also find this on
+
+ https://authors-app.netlify.app/
