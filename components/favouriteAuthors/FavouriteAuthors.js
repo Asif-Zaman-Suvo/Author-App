@@ -11,8 +11,8 @@ const FavouriteAuthors = () => {
   //delete a author
 
   function deleteAuthor(_id) {
-    const updatedItem = favourites.filter((author) => author._id !== _id);
-    setFavourites(updatedItem);
+    const updatedAuthor = favourites.filter((author) => author._id !== _id);
+    setFavourites(updatedAuthor);
   }
 
   return (

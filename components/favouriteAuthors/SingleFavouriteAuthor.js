@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleFavouriteAuthor = ({ result,deleteAuthor }) => {
+const SingleFavouriteAuthor = ({ result, deleteAuthor }) => {
   return (
     <div className="flex justify-center">
       <div className="rounded-lg shadow-lg bg-red-200 max-w-sm">
