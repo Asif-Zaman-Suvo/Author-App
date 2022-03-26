@@ -45,7 +45,7 @@ const Authors = () => {
           <Spinner />
         </div>
       ) : (
-        <div className="container-fluid mx-auto px-8 py-8 grid grid-cols-4 gap-4 text-center text-3xl">
+        <div className="mx-auto px-8 py-8 grid grid-cols-4 gap-4 text-center text-3xl">
           {currentData.map((result) => (
             <ListItemComponent
               key={result._id}

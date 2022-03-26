@@ -1,14 +1,6 @@
-import React, { useContext, useState } from "react";
-import { UserFavourite } from "./../../pages/_app";
+import React from "react";
 
-const ListItemComponent = ({ result }) => {
-  const [favourites, setFavourites] = useContext(UserFavourite);
-
-  const handleAddFavourite = (result) => {
-    setFavourites([...favourites, result]);
-    localStorage.setItem("favourites", JSON.stringify(favourites));
-  };
-
+const SingleFavouriteAuthor = ({ result }) => {
   return (
     <div className="flex justify-center">
       <div className="rounded-lg shadow-lg bg-red-200 max-w-sm">
@@ -22,11 +14,11 @@ const ListItemComponent = ({ result }) => {
             <a href={result.link}>Wikipedia Link</a>
           </p>
           <button
-            onClick={() => handleAddFavourite(result)}
+            onClick={() => handleDelete(result)}
             type="button"
             className="cursor-pointer inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
           >
-            Add to Favourite
+            Remove From Favourite
           </button>
         </div>
       </div>
@@ -34,4 +26,4 @@ const ListItemComponent = ({ result }) => {
   );
 };
 
-export default ListItemComponent;
+export default SingleFavouriteAuthor;
