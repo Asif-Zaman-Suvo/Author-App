@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { UserFavourite } from "../../pages/_app";
 import SingleFavouriteAuthor from "./SingleFavouriteAuthor";
 import { useRouter } from "next/router";
