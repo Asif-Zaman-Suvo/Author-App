@@ -9,7 +9,7 @@ const ListItemComponent = ({ result }) => {
     Promise.all([
       setFavourites((prev) => {
         return [...prev, result];
-      }),
+      }), alert("Author added to favourites")
     ]).then(() =>
       localStorage.setItem("favourites", JSON.stringify(updatedArray))
     );

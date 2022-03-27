@@ -10,9 +10,13 @@ export default function Home() {
       <div className="text-center text-5xl py-10 justify-center items-center">
         Welcome to the Application
       </div>
-      <div className="hover:text-black px-4 m-auto text-black bg-gray-200 rounded-md hover:bg-blue-400 cursor-pointer text-center text-2xl py-10 justify-center items-center">
-        <Link href="dashboard">Author Dashboard</Link>
-      </div>
+
+      <Link passHref href="dashboard">
+        <div className="hover:text-black px-4 m-auto w-72 h-28 text-black bg-gray-200 rounded-md hover:bg-blue-400 cursor-pointer text-center text-2xl py-10 justify-center items-center">
+          {" "}
+          Author Dashboard
+        </div>
+      </Link>
     </div>
   );
 }
